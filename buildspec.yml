@@ -8,13 +8,13 @@ phases:
     commands:
       - echo Build startedd on `date`
       - echo Building the Docker image...          
-      - docker build -t container-app .
-      - docker tag container-app:latest 173961276629.dkr.ecr.us-east-1.amazonaws.com/container-app:latest
+      - docker build -t container_app .
+      - docker tag container_app:latest 173961276629.dkr.ecr.us-east-1.amazonaws.com/container_app:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 173961276629.dkr.ecr.us-east-1.amazonaws.com/container-app:latest
+      - docker push 173961276629.dkr.ecr.us-east-1.amazonaws.com/container_app:latest
 artifacts:
   files:
     - '**/*'
