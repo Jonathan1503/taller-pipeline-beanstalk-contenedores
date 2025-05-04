@@ -6,7 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 173961276629.dkr.ecr.us-east-1.amazonaws.com
     commands:
-      - echo Build started on `date`
+      - echo Build startedd on `date`
       - echo Building the Docker image...          
       - docker build -t container-app .
       - docker tag container-app:latest 173961276629.dkr.ecr.us-east-1.amazonaws.com/container-app:latest
